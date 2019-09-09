@@ -2,4 +2,7 @@ pandas
 jupyterlab
 sklearn
 seaborn
-
+papermill
+nteract-scrapbook
+pytest
+pytest-cov
