@@ -2,8 +2,8 @@
 
 # bash script that runs papermill
 # the arguments will arrive from the github actions
-export LC_ALL="en_US.utf-8"
-export LANG="en_US.utf-8"
+export LC_ALL=C.UTF-8
+export LANG=C.UTF-8
 NOTEBOOK_PATHS="/code/notebooks/*"
 
 mkdir -p /code/outputs/
