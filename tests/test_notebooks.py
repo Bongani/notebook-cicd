@@ -10,7 +10,7 @@ from pandas.util.testing import assert_almost_equal
 
 @pytest.fixture()
 def common_kwargs(tmpdir):
-    outputnb = "../outputs/demo-iris-dataset.ipynb"
+    outputnb = "outputs/demo-iris-dataset.ipynb"
     return {
         'output_path': str(outputnb),
         'kernel_name': 'python{}'.format(sys.version_info.major),
@@ -18,7 +18,7 @@ def common_kwargs(tmpdir):
 
 def test_demo_iris_dataset(common_kwargs):
     pm.execute_notebook(
-        '../notebooks/demo-iris-dataset.ipynb',
+        'notebooks/demo-iris-dataset.ipynb',
         parameters={'validation_datadir': 'validation/data'},
         **common_kwargs
     )
