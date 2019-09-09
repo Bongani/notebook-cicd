@@ -1,19 +1,22 @@
-name: Greet Everyone
-# This workflow is triggered on pushes to the repository.
+name: Python setup
+ 
 on: [push]
-
+ 
 jobs:
   build:
-    # Job name is Greeting
-    name: Greeting
-    # This job runs on Linux
+ 
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.6, 3.7]
+ 
     steps:
-      - uses: actions/checkout@v1
-      # This step uses the hello-world-action stored in this workflow's repository.
-      - uses: ./hello-world-action
-        with:
-          who-to-greet: Octocat
-        id: hello
-      # This step prints the time.
-      - run: echo The time was ${{ steps.hello.outputs.time }}
+    - uses: actions/checkout@v1
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1
+      with:
+        version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install papermill
