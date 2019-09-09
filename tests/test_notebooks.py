@@ -19,7 +19,7 @@ def common_kwargs(tmpdir):
 def test_demo_iris_dataset(common_kwargs):
     pm.execute_notebook(
         'notebooks/demo-iris-dataset.ipynb',
-        parameters={'validation_datadir': 'validation/data'},
+        parameters={'example_if_you_need_parameters': 'your_parameter'},
         **common_kwargs
     )
     nb = sb.read_notebook(common_kwargs['output_path'])
