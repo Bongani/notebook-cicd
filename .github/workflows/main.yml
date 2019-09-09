@@ -24,4 +24,4 @@ jobs:
           pip install -r requirements.txt
           ls -l
           pwd
-          papermill demo-iris-dataset.ipynb
+          papermill demo-iris-dataset.ipynb output.ipynb
