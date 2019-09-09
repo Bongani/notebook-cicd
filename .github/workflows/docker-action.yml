@@ -13,5 +13,5 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build the Docker image
       run: |
-        docker build . --file Dockerfile --tag wbaa-papermill:$(date +%s)
-        docker run wbaa-papermill:$(date +%s)
+        docker build . --file Dockerfile --tag wbaa-papermill
+        docker run wbaa-papermill
