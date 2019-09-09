@@ -22,3 +22,4 @@ jobs:
           python -m pip install --upgrade pip
           pip install papermill
           pip install -r requirements.txt
+          papermill ../demo-iris-dataset.ipynb
