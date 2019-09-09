@@ -4,12 +4,9 @@ RUN mkdir /code
 
 WORKDIR /code
 COPY . .
-RUN pip3 install requirements.txt
 
-RUN pip3 install papermill
+RUN pip3 install papermill jupyterlab
 
 
-CMD ["sleep", "50000"]
-#
-#docker
-
+#CMD ["sleep", "50000"]
+ENTRYPOINT ["scripts/entrypoint.sh"]
