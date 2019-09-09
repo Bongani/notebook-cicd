@@ -1,0 +1,9 @@
+pandas
+jupyterlab
+sklearn
+seaborn
+papermill
+nteract-scrapbook
+pytest
+numpy==1.17.2
+pytest-cov
