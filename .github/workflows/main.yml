@@ -1,4 +1,4 @@
-name: Notebook checker
+name: Notebook checker pytest
  
 on: [push]
 
@@ -22,6 +22,4 @@ jobs:
           python -m pip install --upgrade pip
           pip install papermill
           pip install -r requirements.txt
-          ls -l
-          pwd
-          papermill demo-iris-dataset.ipynb output.ipynb
+          coverage run -m pytest tests
